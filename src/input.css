@@ -87,8 +87,7 @@ body {
 #mainImage {
     max-width: 550px;
     min-width: 250px;
-    max-height: 450px;
-    min-height: 250px;
+    height: 450px;
     overflow: hidden;
 }
 
@@ -167,13 +166,32 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     vertical-align: middle;
+    margin: auto;
+}
+
+picture {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     #mainImgWrapper {
         gap: 8px;
     }
-  }
+}
+
+@media only screen and (max-width: 760px) {
+    #mainImage {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #mainImage {
+        height: 180px;
+    }
+}
