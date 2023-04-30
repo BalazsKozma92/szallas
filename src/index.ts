@@ -57,15 +57,19 @@ class ImageGallery {
     }
 
     private goDirection(direction: -1 | 0 | 1) {
+        let addToIndex: number = 0
+
         if (this.currentImgIndex == 0) {
             if (direction != 0)
-                direction = direction == -1 ? 0 : 1
+                addToIndex = direction == -1 ? this.imagesInList.length - 1 : 1
         } else if (this.currentImgIndex == this.imagesInList.length - 1) {
             if (direction != 0)
-                direction = direction == -1 ? -1 : 0
+                addToIndex = direction == -1 ? -1 : -(this.imagesInList.length - 1)
+        } else {
+            addToIndex = direction
         }
 
-        this.currentImgIndex += direction
+        this.currentImgIndex += addToIndex
 
         this.displayAsMain(this.imagesInList[this.currentImgIndex].src)
         this.highLightImageInList(this.imagesInList[this.currentImgIndex])
