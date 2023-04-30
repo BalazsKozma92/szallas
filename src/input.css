@@ -85,8 +85,7 @@ body {
 }
 
 #mainImage {
-    max-width: 550px;
-    min-width: 250px;
+    width: 550px;
     height: 450px;
     overflow: hidden;
 }
@@ -170,6 +169,7 @@ img {
     display: block;
     vertical-align: middle;
     margin: auto;
+    object-fit: cover;
 }
 
 picture {
@@ -178,20 +178,21 @@ picture {
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-    #mainImgWrapper {
-        gap: 8px;
-    }
-}
-
 @media only screen and (max-width: 760px) {
     #mainImage {
         height: 250px;
+        width: 250px;
+    }
+
+    .arrows {
+        height: 40px;
+        width: 40px;
     }
 }
 
 @media only screen and (max-width: 450px) {
     #mainImage {
         height: 180px;
+        width: 180px;
     }
 }
