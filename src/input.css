@@ -1,0 +1,179 @@
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    font-family: ui-sans-serif, system-ui, "Segoe UI";
+}
+
+.st0 {
+    display: none
+}
+
+.st1 {
+    display: inline
+}
+
+.st2 {
+    fill: rgb(45 79 6);
+}
+
+body {
+    user-select: none;
+}
+
+#header {
+    background-image: url('./img/headerImg.jpg');
+    width: 100%;
+    height: 208px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#headerBg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+}
+
+#headerText {
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 10px;
+    opacity: 0.8;
+    padding: 8px 16px;
+    background-color: black;
+    z-index: 10;
+}
+
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+#mainImgWrapper {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.arrows {
+    height: 50px;
+    width: 50px;
+    opacity: 0.4;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.arrows:hover {
+    opacity: 1;
+}
+
+#leftArrow {
+    transform: rotate(180deg);
+}
+
+#mainImage {
+    max-width: 550px;
+    min-width: 250px;
+    max-height: 450px;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+#imgListOuterWrapper {
+    width: 100%;
+    padding: 16px 0;
+    box-shadow: 0 20px 50px 25px rgba(0, 0, 0, 0.1);
+}
+
+#imgListInnerWrapper {
+    width: 66%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#imageList {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    height: 130px;
+    overflow: hidden;
+}
+
+#pagerList {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.pagerOuter {
+    border-radius: 12px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagerInner {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    --tw-bg-opacity: 0.7;
+}
+
+.bg-green-500 {
+    background-color: rgb(34, 197, 94);
+}
+
+.hidden {
+    display: none;
+}
+
+.listImg {
+    width: 176px;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.listImg:hover {
+    opacity: 1;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+    #mainImgWrapper {
+        gap: 8px;
+    }
+  }
